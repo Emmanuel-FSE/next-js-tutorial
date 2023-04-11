@@ -15,6 +15,15 @@ function BlogDetails({ post }) {
         >
           {`<< Go back to blog listing`}
         </Link>
+
+        <div className="mt-4">
+          <Link
+            href={`/comments/${post.id}`}
+            className="bg-black hover:text-blue-700 text-slate-200 font-serif shadow-md text-bold px-5 py-2 rounded-sm"
+          >
+            Comments
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -43,5 +52,6 @@ export async function getStaticProps(context) {
     props: {
       post: data,
     },
+    revalidate: 10,
   };
 }

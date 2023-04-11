@@ -11,6 +11,10 @@ function Nav() {
       <Link className="hover:underline" href="/blogs">
         Blogs
       </Link>
+
+      <Link className="hover:underline" href="/comments">
+        Comments
+      </Link>
     </div>
   );
 }
