@@ -3,13 +3,13 @@ import React from 'react'
 
 function Blog({post}) {
   return (
-    <div className="border shadow-md" key={post.id}>
+    <Link href={`/blogs/${post.id}`} className="border shadow-md hover:shadow-lg" key={post.id}>
         <div className="px-6 py-4">
-          <Link href={`/blogs/${post.id}`}  className="hover:underline font-bold text-left text-xl mb-2">
+          <h1 className="hover:underline font-bold text-left text-xl mb-2">
             {post.title}
-          </Link>
+          </h1>
         </div>
-      </div>
+      </Link>
   )
 }
 
